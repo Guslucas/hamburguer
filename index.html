@@ -5,15 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hamburguer</title>
+    <script>
+        function chamaCor() {
+            var color = document.getElementById("cColor").value;
+            document.body.style.backgroundColor = color;
+        }
+    </script>
 </head>
 <body>
+        
     <div id="hamburguer">
-        <span></span>
-        <span></span>
-        <span></span>
+            
+        <input type="checkbox" id="check" name="cCheck">
         
-            <input type="checkbox" id="check">
-        
+        <div id="circle"></div>
+        <span></span>
+        <span></span>
+        <span></span>
     </div>
+
+    <div id="color">
+        <form action="" method="POST" oninput="chamaCor();">
+            <input type="color" id="cColor" name="a">
+        </form>
+    </div>
+    
 </body>
 </html>
