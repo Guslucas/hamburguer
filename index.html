@@ -6,9 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hamburguer</title>
     <script>
+        var count=0;
         function chamaCor() {
             var color = document.getElementById("cColor").value;
             document.body.style.backgroundColor = color;
+        }
+
+        function changeVar() {
+            count++;
+            if (count%2 == 0) {
+                document.documentElement.style.setProperty('--teste', '-200px');
+            } else {
+                document.documentElement.style.setProperty('--teste', '200px');
+            }
         }
     </script>
 </head>
@@ -16,7 +26,7 @@
         
     <div id="hamburguer">
             
-        <input type="checkbox" id="check" name="cCheck">
+        <input type="checkbox" id="check" name="cCheck" onclick="changeVar()">
         
         <div id="circle"></div>
         <span></span>
@@ -26,7 +36,7 @@
 
     <div id="color">
         <form action="" method="POST" oninput="chamaCor();">
-            <input type="color" id="cColor" name="a">
+            <input type="color" id="cColor" name="a" value="#ff4500">
         </form>
     </div>
     
