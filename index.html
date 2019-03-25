@@ -13,11 +13,20 @@
         }
 
         function changeVar() {
+            var x = window.matchMedia("(max-width: 850px)")
             count++;
-            if (count%2 == 0) {
-                document.documentElement.style.setProperty('--teste', '-200px');
+            if (x.matches) {
+                if (count%2 == 0) {
+                    document.documentElement.style.setProperty('--center', '-200px');
+                } else {
+                    document.documentElement.style.setProperty('--center', "calc(50vw - 40px)");
+                }
             } else {
-                document.documentElement.style.setProperty('--teste', '200px');
+                if (count%2 == 0) {
+                    document.documentElement.style.setProperty('--teste', '-200px');
+                } else {
+                    document.documentElement.style.setProperty('--teste', '200px');
+                }
             }
         }
     </script>

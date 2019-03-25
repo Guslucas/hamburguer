@@ -8,7 +8,7 @@ body {
 div#hamburguer {
     position: relative;
     margin: auto;
-    margin-top: calc(20%);
+    margin-top: calc(50vh - 21px);
     width: 60px;
     height: 42px;
     display: block;
@@ -99,4 +99,12 @@ div#color input#cColor {
     left: 13%;
     top: 22px;
     
+}
+
+@media (max-width: 850px) {
+    div#color {
+        top: -200px;
+        left: var(--center, -200px);
+        transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1); 
+    }
 }
